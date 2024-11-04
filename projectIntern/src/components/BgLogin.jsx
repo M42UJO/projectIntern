@@ -14,7 +14,7 @@ export default function ExampleL() {
                     </div>
 
                     <div style={{ backgroundColor: '#FFFFFF', padding: '2rem', borderRadius: '8px', width: '300px' }}>
-                        <h2 style={{ textAlign: 'center', marginBottom: '1rem' }}>Login BOXXXX</h2>
+                        <h2 style={{ textAlign: 'center', marginBottom: '1rem' }}>Login BOXXX</h2>
                         <form>
 
                         </form>
