@@ -3,10 +3,11 @@
 module.exports = {
     important: true,
     content: [
-        "./src//.{js,jsx,ts,tsx}",
-        './components/**/.{html,js}',
-        './pages//*.{html,js}',
-        './node_modules/@my-company/tailwind-components//*.js',
+        "./src/**/*.{js,jsx,ts,tsx}",
+        "./src/*.{js,jsx,ts,tsx}",
+        './components/**/*.{html,js}',
+        './pages/**/*.{html,js}',
+        './node_modules/@my-company/tailwind-components/**/*.js',
 
     ],
     theme: {
