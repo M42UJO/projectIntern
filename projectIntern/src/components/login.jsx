@@ -58,14 +58,14 @@ export default function Example() {
                 className="oi sp ael agy azv bpp mr-2"
               />
               <label htmlFor="remember-me" className="ka lx axq azi ">
-                 Remember me
+                Remember me
               </label>
             </div>
 
             <div>
               <button
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="custom-button flex w-full justify-center rounded-md bg-black py-2.5 font-semibold text-white shadow-sm "
               >
                 เข้าสู่ระบบ
               </button>
