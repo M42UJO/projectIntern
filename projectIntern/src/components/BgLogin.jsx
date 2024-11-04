@@ -6,7 +6,7 @@ export default function ExampleL() {
     <>
       <div class="bg-[#11111D] h-screen flex justify-center items-center">
         <div style={{ display: "flex", gap: "30rem" }}>
-          <div class="flex gap-[30rem]">
+          <div>
             <div class="flex flex-col items-center">
               <img src={logo} alt="Logo" class="w-[389px]" />
               <h2 class="text-white font-bold mt-4 text-center">
@@ -15,7 +15,6 @@ export default function ExampleL() {
               <p class="text-white text-center">business value co.td</p>
             </div>
           </div>
-
 
           <div className="flex min-h-full flex-1 flex-col justify-center px-12 py-12 lg:px-12 bg-white">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
