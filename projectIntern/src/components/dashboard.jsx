@@ -3,8 +3,11 @@ import logo from "./img/logo.png";
 
 export default function Dashboard() {
   return (
-    <div className="flex h-screen bg-gray-800 p-4">
-      <aside className="w-60 bg-slate-950 text-white flex flex-col rounded-md shadow-lg mr-4">
+    <div className="flex h-screen p-4" style={{backgroundColor: "#272727"}}>
+      <aside
+        className="w-60 text-white flex flex-col rounded-md shadow-lg mr-4"
+        style={{ backgroundColor: "#11111D" }}
+      >
         <div className="flex items-center space-x-2 px-4 py-5 ">
           <div className="bg-slate-50 rounded-full h-8 w-8 flex items-center justify-center">
             <span className="text-black font-bold">B</span>
@@ -26,7 +29,10 @@ export default function Dashboard() {
             Setting
           </a>
         </nav>
-        <div className="p-4 bg-gray-800 flex items-center space-x-2 border-t border-gray-700">
+        <div
+          className="p-4 flex items-center space-x-2 border-t border-gray-700"
+          style={{ backgroundColor: "#221E37" }}
+        >
           <img
             src="https://via.placeholder.com/30"
             alt="User Avatar"
@@ -39,7 +45,7 @@ export default function Dashboard() {
         </div>
       </aside>
 
-      <main className="flex-grow p-6 bg-white rounded-md shadow-lg">
+      <main className="flex-grow p-6 rounded-md shadow-lg" style={{backgroundColor: "#F5F6FB"}}>
         <header className="flex items-center justify-between mb-6">
           <h1 className="text-2xl font-semibold"></h1>
           <div className="flex items-center space-x-2">
@@ -57,7 +63,7 @@ export default function Dashboard() {
           </div>
         </header>
 
-        <section className="bg-white p-6 rounded-lg shadow-md">
+        <section className="p-6 rounded-lg shadow-md" style={{backgroundColor: "#FFFFFF"}}>
           <div className="grid grid-cols-4 gap-4 mb-4 text-gray-500 font-semibold">
             <div>รายการเอกสาร</div>
             <div>แท็กเอกสาร</div>
