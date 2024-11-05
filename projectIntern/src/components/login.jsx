@@ -1,77 +1,102 @@
-export default function Example() {
+import React from "react";
+import logo from "./img/logo.png";
+
+
+export default function Login() {
   return (
     <>
-      {}
-      
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <h1 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
-            Login
-          </h1>
+      <div className="bg-[#11111D] h-screen flex flex-col lg:flex-row justify-center items-center space-y-12 space-y-0 space-x-20 gap-20">
+        {/* Logo Section (Transparent Background) */}
+        <div className="flex flex-col items-center">
+          <img src={logo} alt="Logo" className="w-[200px] lg:w-[420px]" />
+          <h2
+            className="text-white mt-4 text-center text-2xl lg:text-xl"
+            style={{ letterSpacing: "9px" }}
+          >
+            Data Collection System
+          </h2>
+
+          <p
+            className="text-gray-400 text-center text-xl lg:text-sm mt-3"
+            style={{ letterSpacing: "13.8px" }}
+          >
+            business value co.td
+          </p>
         </div>
 
-        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form action="#" method="POST" className="space-y-6">
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm/6 font-medium text-gray-900"
-              >
-                Username
-              </label>
-              <div className="mt-2">
+        {/* Login Form Section (White Background) */}
+        <div className="flex flex-col justify-center px-8 py-12 lg:px-16 bg-white rounded-lg shadow-lg max-w-md w-full">
+          <h1 className="text-center text-2xl font-bold text-black mt-5">
+            Login
+          </h1>
+
+          <div className="mt-8">
+            <form action="#" method="POST" className="space-y-6">
+              {/* Username */}
+              <div>
+                <label
+                  htmlFor="username"
+                  className="block text-sm font-bold text-black"
+                >
+                  Username
+                </label>
                 <input
-                  id="email"
-                  name="email"
-                  type="email"
+                  id="username"
+                  name="username"
+                  type="text"
                   required
-                  autoComplete="email"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+                  autoComplete="username"
+                  placeholder="กรุณาใส่ Username"
+                  className="border-b-2 focus:outline-none mt-2 block w-full border-gray-300 shadow-sm py-2 px-4 text-gray-900 focus:ring-gray-900 focus:border-gray-900"
                 />
               </div>
-            </div>
 
-            <div>
-              <div className="flex items-center justify-between">
+              {/* Password */}
+              <div>
                 <label
                   htmlFor="password"
-                  className="block text-sm/6 font-medium text-gray-900"
+                  className="block text-sm font-bold text-black"
                 >
                   Password
                 </label>
-              </div>
-              <div className="mt-2">
                 <input
                   id="password"
                   name="password"
                   type="password"
                   required
                   autoComplete="current-password"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+                  placeholder="กรุณาใส่ Password"
+                  className="border-b-2 focus:outline-none mt-2 block w-full border-gray-300 shadow-sm py-2 px-4 text-gray-900 focus:ring-gray-900 focus:border-gray-900"
                 />
               </div>
-            </div>
-            <div className="ma zr">
-              <input
-                id="remember-me"
-                name="remember-me"
-                type="checkbox"
-                className="oi sp ael agy azv bpp mr-2"
-              />
-              <label htmlFor="remember-me" className="ka lx axq azi ">
-                Remember me
-              </label>
-            </div>
 
-            <div>
-              <button
-                type="submit"
-                className="custom-button flex w-full justify-center rounded-md bg-black py-2.5 font-semibold text-white shadow-sm "
-              >
-                เข้าสู่ระบบ
-              </button>
-            </div>
-          </form>
+              {/* Remember Me */}
+              <div className="flex items-center">
+                <input
+                  id="remember-me"
+                  name="remember-me"
+                  type="checkbox"
+                  className="h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                />
+                <label
+                  htmlFor="remember-me"
+                  className="ml-2 block text-sm text-gray-700"
+                >
+                  Remember me
+                </label>
+              </div>
+
+              {/* Submit Button */}
+              <div>
+                <button
+                  type="submit"
+                  className="w-full flex justify-center rounded-md bg-black py-2 text-white font-semibold shadow-sm hover:bg-gray-800 transition duration-300 mb-5"
+                >
+                  เข้าสู่ระบบ
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </>
