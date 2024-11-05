@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "./img/logo.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Login() {
   return (
