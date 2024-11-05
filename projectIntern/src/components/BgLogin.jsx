@@ -46,7 +46,7 @@ export default function ExampleL() {
                   required
                   autoComplete="username"
                   placeholder="กรุณาใส่ Username"
-                  className="border-b-2 focus:outline-none mt-2 block w-full rounded-md border-gray-300 shadow-sm py-2 px-4 text-gray-900 focus:ring-gray-900 focus:border-gray-900"
+                  className="border-b-2 focus:outline-none mt-2 block w-full border-gray-300 shadow-sm py-2 px-4 text-gray-900 focus:ring-gray-900 focus:border-gray-900"
                 />
               </div>
 
@@ -65,7 +65,7 @@ export default function ExampleL() {
                   required
                   autoComplete="current-password"
                   placeholder="กรุณาใส่ Password"
-                  className="mt-2 block w-full rounded-md border-gray-300 shadow-sm py-2 px-4 text-gray-900 focus:ring-indigo-500 focus:border-indigo-500"
+                  className="border-b-2 focus:outline-none mt-2 block w-full border-gray-300 shadow-sm py-2 px-4 text-gray-900 focus:ring-gray-900 focus:border-gray-900"
                 />
               </div>
 
