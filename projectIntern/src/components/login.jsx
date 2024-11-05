@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "./img/logo.png";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Login() {
   return (
@@ -26,7 +26,7 @@ export default function Login() {
 
         {/* Login Form Section (White Background) */}
         <div className="flex flex-col justify-center px-8 py-12 lg:px-16 bg-white rounded-lg shadow-lg max-w-md w-full">
-          <h1 className="text-center text-2xl font-bold text-black mt-5">
+          <h1 className="text-center text-4xl font-bold text-black mt-5">
             Login
           </h1>
 
@@ -36,9 +36,9 @@ export default function Login() {
               <div>
                 <label
                   htmlFor="username"
-                  className="block text-sm font-bold text-black"
+                  className="block text-lg font-bold text-black"
                 >
-                  Username
+                  Username 
                 </label>
                 <input
                   id="username"
@@ -47,7 +47,7 @@ export default function Login() {
                   required
                   autoComplete="username"
                   placeholder="กรุณาใส่ Username"
-                  className="border-b-2 focus:outline-none mt-2 block w-full border-gray-300 shadow-sm py-2 px-4 text-gray-900 focus:ring-gray-900 focus:border-gray-900"
+                  className="border-b-2 focus:outline-none mt-2 block w-full px-0 pb-1 border-gray-600 py-2 px-4 text-gray-900 focus:border-gray-900 text-xs"
                 />
               </div>
 
@@ -66,21 +66,21 @@ export default function Login() {
                   required
                   autoComplete="current-password"
                   placeholder="กรุณาใส่ Password"
-                  className="border-b-2 focus:outline-none mt-2 block w-full border-gray-300 shadow-sm py-2 px-4 text-gray-900 focus:ring-gray-900 focus:border-gray-900"
+                  className="border-b-2 focus:outline-none mt-2 block w-full px-0 pb-1 border-gray-600  py-2 px-4 text-gray-900 focus:border-gray-900 text-xs"
                 />
               </div>
 
               {/* Remember Me */}
-              <div className="flex items-center">
+              <div className="flex">
                 <input
                   id="remember-me"
                   name="remember-me"
                   type="checkbox"
-                  className="h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                  className="h-4 w-4  rounded"
                 />
                 <label
                   htmlFor="remember-me"
-                  className="ml-2 block text-sm text-gray-700"
+                  className="ml-2 block text-xs text-gray-900"
                 >
                   Remember me
                 </label>
@@ -90,7 +90,7 @@ export default function Login() {
               <div>
                 <button
                   type="submit"
-                  className="w-full flex justify-center rounded-md bg-black py-2 text-white font-semibold shadow-sm hover:bg-gray-800 transition duration-300 mb-5"
+                  className="w-full flex justify-center rounded-xl bg-black py-4 text-white font-bold shadow-sm hover:bg-gray-800 transition duration-300 mb-5"
                 >
                   เข้าสู่ระบบ
                 </button>
