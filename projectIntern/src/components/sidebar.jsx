@@ -1,31 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Sidebar() {
+  const [isSpacesOpen, setIsSpacesOpen] = useState(false);
+
   return (
     <>
       <aside
         className="w-60 text-white flex flex-col rounded-md shadow-lg mr-4"
         style={{ backgroundColor: "#11111D" }}
       >
-        <div className="flex items-center space-x-2 px-4 py-5 ">
-          <div className="bg-slate-50 rounded-lg h-8 w-8 flex items-center justify-center">
+        <div className="flex items-center space-x-2 px-7 py-5 ">
+          <div className="bg-slate-50 rounded h-8 w-8 flex items-center justify-center">
             <span className="text-black font-bold">B</span>
           </div>
-          <div>
-            <p className="text-lg font-semibold leading-tight">BSV</p>
+          <div className="p-1">
+            <p className="text-md font-bold leading-tight">BSV</p>
             <p className="text-xs text-gray-400">Data Collection System</p>
           </div>
         </div>
 
-        <nav className="flex-grow p-4 space-y-4">
-          <a href="#" className="block text-gray-300 button flex items-center">
+        <nav className="flex-grow  mt-4">
+          <a
+            href="#"
+            className="block text-gray-300 button flex items-center font-bold p-4 pl-7"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-6 mr-2"
+              className="size-6 mr-5"
             >
               <path
                 strokeLinecap="round"
@@ -36,14 +41,18 @@ export default function Sidebar() {
             Dashboard
           </a>
 
-          <a href="#" className="block text-gray-300 button flex items-center">
+          {/* Spaces with Dropdown */}
+          <div
+            className="text-gray-300 font-bold p-4 pl-7 flex items-center cursor-pointer button"
+            onClick={() => setIsSpacesOpen(!isSpacesOpen)}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width={1.5}
               stroke="currentColor"
-              class="size-6 mr-2"
+              className="size-6 mr-5"
             >
               <path
                 stroke-linecap="round"
@@ -52,16 +61,30 @@ export default function Sidebar() {
               />
             </svg>
             Spaces
-          </a>
+            <span className="ml-auto">{isSpacesOpen ? "▴" : "▾"}</span>
+          </div>
+          {isSpacesOpen && (
+            <div className=" text-gray-400">
+              <a href="#" className="block p-2 pl-14 button">
+                PPE API setting
+              </a>
+              <a href="#" className="block p-2 pl-14 button">
+                PWA API setting
+              </a>
+            </div>
+          )}
 
-          <a href="#" className="block text-gray-300 button flex items-center">
+          <a
+            href="#"
+            className="block text-gray-300 button flex items-center font-bold p-4 pl-7"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="size-6 mr-2"
+              class="size-6 mr-5"
             >
               <path
                 stroke-linecap="round"
@@ -78,13 +101,13 @@ export default function Sidebar() {
           </a>
         </nav>
         <div
-          className="p-4 flex items-center space-x-2 border-t border-gray-700"
+          className="py-6 pl-6 flex items-center space-x-2 "
           style={{ backgroundColor: "#221E37" }}
         >
           <img
             src="https://via.placeholder.com/30"
             alt="User Avatar"
-            className="h-8 w-8 rounded-full"
+            className="h-12 w-12 rounded-full"
           />
           <div class="flex items-center">
             <div>
