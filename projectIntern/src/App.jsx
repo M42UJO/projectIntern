@@ -7,7 +7,8 @@ function App() {
     <>
     
     <ExampleL />
-    <Dashboard />
+
+    {/* <Dashboard /> */}
     </>
   )
 }
