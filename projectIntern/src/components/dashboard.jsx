@@ -1,14 +1,10 @@
 import React from "react";
 import Sidebar from "./sidebar";
 
-
-
 export default function Dashboard() {
   return (
     <div className="flex h-screen p-4">
-      
       <Sidebar />
-
 
       <main
         className="flex-grow p-6 rounded-md shadow-lg"
@@ -20,7 +16,7 @@ export default function Dashboard() {
             <input
               type="text"
               placeholder="ค้นหา"
-              className="border p-2 rounded-md w-80"
+              className="border py-4 pl-4 rounded-md w-96"
             />
             <button className="bg-gray-200 py-4 rounded-md w-40">
               กรองข้อมูล
@@ -32,46 +28,77 @@ export default function Dashboard() {
         </header>
 
         <section
-          className="p-6 rounded-lg shadow-md"
+          className=" rounded-lg shadow-md"
           style={{ backgroundColor: "#FFFFFF" }}
         >
-          <div className="grid grid-cols-4 gap-4 mb-4 text-gray-500 font-semibold">
+          <div className="grid grid-cols-4 gap-4 text-gray-900 font-semibold border-b-2 border-gray-300 pb-5 p-6">
             <div>รายการเอกสาร</div>
             <div>แท็กเอกสาร</div>
             <div>ผู้สร้างเอกสาร</div>
             <div>วันที่อัปโหลด</div>
           </div>
+        
 
-          <div className="space-y-4">
+          <div className="space-y-4 p-6">
             <div className="grid grid-cols-4 gap-4 items-center">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-4 font-bold">
                 <img
                   src="https://via.placeholder.com/30"
                   alt="User Avatar"
-                  className="h-8 w-8 rounded-full"
+                  className=" w-12 rounded-full"
+                />
+                <span>PPE API setting</span>
+              </div>
+              <div className="flex space-x-2">
+                <span className="bg-gray-900 text-xs text-white px-2 py-1 rounded">
+                  API
+                </span>
+                <span className="bg-gray-900 text-xs text-white px-2 py-1 rounded">
+                  website
+                </span>
+              </div>
+              <div className="flex items-center space-x-4 font-bold">
+                <img
+                  src="https://via.placeholder.com/24"
+                  alt="Avatar"
+                  className="w-12 rounded-full"
+                />
+                <div>
+                  <p className="">Mala_C</p>
+                  <p className="text-xs text-gray-400">Accounting department</p>
+                </div>
+              </div>
+              <div>01 xxxxx 2077</div>
+            </div>
+            <div className="grid grid-cols-4 gap-4 items-center">
+              <div className="flex items-center space-x-4 font-bold">
+                <img
+                  src="https://via.placeholder.com/30"
+                  alt="User Avatar"
+                  className="w-12 rounded-full"
                 />
                 <span>PaperTest</span>
               </div>
               <div className="flex space-x-2">
-                <span className="bg-gray-200 text-xs px-2 py-1 rounded">
+                <span className="bg-gray-900 text-xs text-white px-2 py-1 rounded">
                   API
                 </span>
-                <span className="bg-gray-200 text-xs px-2 py-1 rounded">
-                  website
+                <span className="bg-gray-900 text-xs text-white px-2 py-1 rounded">
+                  application
                 </span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-4 font-bold">
                 <img
                   src="https://via.placeholder.com/24"
                   alt="Avatar"
-                  className="h-6 w-6 rounded-full"
+                  className="w-12 rounded-full"
                 />
                 <div>
-                  <p className="text-sm">UserName</p>
+                  <p className="">UserName</p>
                   <p className="text-xs text-gray-400">Role</p>
                 </div>
               </div>
-              <div>01 xxxxx 2077</div>
+              <div >01 xxxxx 2077</div>
             </div>
           </div>
         </section>
