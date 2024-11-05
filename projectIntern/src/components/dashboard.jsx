@@ -3,8 +3,8 @@ import logo from "./img/logo.png";
 
 export default function Dashboard() {
   return (
-    <div className="flex h-screen bg-gray-100">
-      <aside className="w-64 bg-slate-950 text-white flex flex-col">
+    <div className="flex h-screen bg-gray-800 p-4">
+      <aside className="w-60 bg-slate-950 text-white flex flex-col rounded-md shadow-lg mr-4">
         <div className="flex items-center space-x-2 px-4 py-5 ">
           <div className="bg-slate-50 rounded-full h-8 w-8 flex items-center justify-center">
             <span className="text-black font-bold">B</span>
@@ -39,8 +39,7 @@ export default function Dashboard() {
         </div>
       </aside>
 
-    
-      <main className="flex-grow p-6">
+      <main className="flex-grow p-6 bg-white rounded-md shadow-lg">
         <header className="flex items-center justify-between mb-6">
           <h1 className="text-2xl font-semibold"></h1>
           <div className="flex items-center space-x-2">
@@ -67,7 +66,6 @@ export default function Dashboard() {
           </div>
 
           <div className="space-y-4">
-            
             <div className="grid grid-cols-4 gap-4 items-center">
               <div className="flex items-center space-x-2">
                 <img
