@@ -6,7 +6,7 @@ export default function Sidebar() {
   return (
     <>
       <aside
-        className="w-60 text-white flex flex-col rounded-md shadow-lg mr-4"
+        className="w-72 text-white flex flex-col rounded-md shadow-lg mr-4"
         style={{ backgroundColor: "#11111D" }}
       >
         <div className="flex items-center space-x-2 px-7 py-5 ">
@@ -64,11 +64,11 @@ export default function Sidebar() {
             <span className="ml-auto">{isSpacesOpen ? "▴" : "▾"}</span>
           </div>
           {isSpacesOpen && (
-            <div className=" text-gray-400">
-              <a href="#" className="block p-2 pl-14 button">
+            <div className=" text-gray-400 font-bold">
+              <a href="#" className="block py-2 pl-20 button">
                 PPE API setting
               </a>
-              <a href="#" className="block p-2 pl-14 button">
+              <a href="#" className="block py-2 pl-20 button">
                 PWA API setting
               </a>
             </div>
@@ -110,8 +110,8 @@ export default function Sidebar() {
             className="h-12 w-12 rounded-full"
           />
           <div class="flex items-center">
-            <div>
-              <p className="text-sm font-medium">User Name</p>
+            <div className="mr-2">
+              <p className="text-sm font-bold">User Name</p>
               <p className="text-xs text-gray-400">Role</p>
             </div>
             <div>
@@ -121,7 +121,7 @@ export default function Sidebar() {
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="size-6 ml-12"
+                class="size-6 ml-20"
               >
                 <path
                   stroke-linecap="round"
