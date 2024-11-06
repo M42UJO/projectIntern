@@ -49,7 +49,7 @@ export default function Spaces() {
                 <img
                   src={preview}
                   alt="Preview"
-                  className="w-full h-full object-cover"
+                  className="w-fit max-h-[375px] rounded-t-md  object-cover"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-gray-500">
