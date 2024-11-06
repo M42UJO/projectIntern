@@ -27,17 +27,13 @@ export default function Dashboard() {
           </div>
         </header>
 
-        <section
-          className=" rounded-lg shadow-md"
-          style={{ backgroundColor: "#FFFFFF" }}
-        >
+        <section className=" rounded-lg shadow-md bg-[#FFFFFF]">
           <div className="grid grid-cols-4 gap-4 text-gray-900 bg-gray-50 font-semibold border-b-2 border-gray-300 pb-5 p-6">
             <div>รายการเอกสาร</div>
             <div>แท็กเอกสาร</div>
             <div>ผู้สร้างเอกสาร</div>
             <div>วันที่อัปโหลด</div>
           </div>
-        
 
           <div className="space-y-4 p-6">
             <div className="grid grid-cols-4 gap-4 items-center">
@@ -98,7 +94,7 @@ export default function Dashboard() {
                   <p className="text-xs text-gray-400">Role</p>
                 </div>
               </div>
-              <div >01 January 2024</div>
+              <div>01 January 2024</div>
             </div>
           </div>
         </section>

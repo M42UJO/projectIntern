@@ -18,12 +18,18 @@ export default function EditSetting() {
             className="rounded-md shadow-lg bg-white w-full px-6 pt-6 pb-0 border-b border-gray-300"
             style={{ marginBottom: "24px" }}
           >
-            <h1 className="text-2xl font-semibold">PPE API setting</h1>
-
+            <div className="flex items-center">
+            <img
+              src="https://via.placeholder.com/30"
+              alt="User Avatar"
+              className="h-12 w-12 rounded-full"
+            />
+            <h1 className="text-xl px-4  font-bold">PPE API setting</h1>
+            </div>
             {/* Tab Buttons */}
-            <div className="flex items-center space-x-4 mt-4">
+            <div className="flex items-center space-x-4 ml-14">
               <button
-                className={`px-6 py-2 font-semibold ${
+                className={`px-2 py-2 font-semibold ${
                   activeTab === "รายการ"
                     ? "text-black border-b-2 border-black"
                     : "text-gray-500"
@@ -33,7 +39,7 @@ export default function EditSetting() {
                 รายการ
               </button>
               <button
-                className={`px-6 py-2 font-semibold ${
+                className={`px-2 py-2 font-semibold ${
                   activeTab === "ตั้งค่าเอกสาร"
                     ? "text-black border-b-2 border-black"
                     : "text-gray-500"
@@ -46,9 +52,9 @@ export default function EditSetting() {
           </header>
 
           {/* Content Section */}
-          <section className="p-6">
+          <section className="p-6 pt-1">
             {/* Add Item Button */}
-            <div className="mb-4">
+            <div className="mb-8">
               <button className="bg-black text-white py-2 px-4 rounded-md shadow-md">
                 + เพิ่มรายการ
               </button>
@@ -70,11 +76,11 @@ export default function EditSetting() {
                   className="grid grid-cols-4 gap-4 items-center p-2 "
                 >
                   {/* API Setting Name with Eye Icon */}
-                  <div className="relative flex justify-between items-center bg-white p-2 rounded-md w-full border">
+                  <div className="relative flex justify-between items-center bg-white p-2 py-4 rounded-md w-full border shadow-md">
                     <span className="text-gray-700 font-medium">
                       API Setting V1
                     </span>
-                    <button className="bg-black text-white p-2 flex items-center justify-center w-8 h-full absolute right-0 top-0">
+                    <button className="bg-black shadow-md text-white p-2 flex items-center rounded-r-md justify-center w-14 h-full absolute right-0 top-0">
                       <svg
                         className="w-6 h-6 text-gray-800 dark:text-white"
                         aria-hidden="true"
@@ -99,21 +105,21 @@ export default function EditSetting() {
                   </div>
 
                   {/* Upload Date */}
-                  <div className="bg-white border p-2 rounded-md text-gray-600 text-sm text-center">
+                  <div className="bg-white border p-2 py-4 rounded-md shadow-md text-gray-600 text-sm text-center">
                     01/01/2024
                   </div>
 
                   {/* Last Update Date */}
-                  <div className="bg-white border p-2 rounded-md text-gray-600 text-sm text-center">
+                  <div className="bg-white border p-2 py-4 rounded-md shadow-md text-gray-600 text-sm text-center">
                     16/01/2024
                   </div>
 
                   {/* Edit and Delete Buttons */}
                   <div className="flex space-x-2 justify-center">
-                    <button className="bg-gray-400 text-white py-2 px-4 rounded-md">
+                    <button className="bg-[#AFAFAF] text-white py-4 px-4 w-40 rounded-md shadow-md">
                       แก้ไข
                     </button>
-                    <button className="bg-black text-white py-2 px-4 rounded-md">
+                    <button className="bg-black text-white py-4 px-4 w-40 rounded-md shadow-md">
                       ลบ
                     </button>
                   </div>

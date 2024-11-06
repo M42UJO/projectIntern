@@ -24,12 +24,19 @@ export default function AddSetting() {
             className="rounded-md shadow-lg bg-white w-full px-6 pt-6 pb-0 border-b border-gray-300"
             style={{ marginBottom: "24px" }}
           >
-            <h1 className="text-2xl font-semibold">PPE API setting</h1>
+            <div className="flex items-center">
+              <img
+                src="https://via.placeholder.com/30"
+                alt="User Avatar"
+                className="h-12 w-12 rounded-full"
+              />
+              <h1 className="text-xl px-4  font-bold">PPE API setting</h1>
+            </div>
 
             {/* Tab Buttons */}
-            <div className="flex items-center space-x-4 mt-4">
+            <div className="flex items-center space-x-4 ml-14">
               <button
-                className={`px-6 py-2 font-semibold ${
+                className={`px-2 py-2 font-semibold ${
                   activeTab === "เพิ่มรายการ"
                     ? "text-black border-b-2 border-black"
                     : "text-gray-500"
@@ -41,16 +48,16 @@ export default function AddSetting() {
             </div>
           </header>
           {/* Content Section */}
-          <section className="p-6">
+          <section className="p-6 rounded-lg shadow-md m-6 bg-[#FFFFFF]">
             {/* Input Field */}
             <div className="mb-6">
               <label className="block text-gray-700 font-medium mb-2">
-                ชื่อรายการ:
+                ชื่อรายการ :
               </label>
               <input
                 type="text"
                 placeholder="กรุณาใส่ชื่อรายการ"
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 py-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -60,7 +67,7 @@ export default function AddSetting() {
                 apiKey="YOUR_TINYMCE_API_KEY" // Replace with your TinyMCE API key
                 value={content}
                 init={{
-                  height: 300,
+                  height: 500,
                   menubar: false,
                   plugins: [
                     "advlist autolink lists link image charmap print preview anchor",
@@ -78,10 +85,10 @@ export default function AddSetting() {
 
             {/* Save and Cancel Buttons */}
             <div className="flex justify-end space-x-4">
-              <button className="bg-gray-400 text-white py-2 px-6 rounded-md hover:bg-gray-500">
+              <button className="bg-[#AFAFAF] text-white py-4 px-6 w-2/4 rounded-md ">
                 ยกเลิก
               </button>
-              <button className="bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-700">
+              <button className="bg-black text-white py-4 px-6 w-2/4 rounded-md ">
                 บันทึก
               </button>
             </div>

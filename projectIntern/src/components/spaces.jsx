@@ -38,10 +38,7 @@ export default function Spaces() {
           </a>
         </header>
 
-        <section
-          className="p-6 rounded-lg shadow-md m-6"
-          style={{ backgroundColor: "#FFFFFF" }}
-        >
+        <section className="p-6 rounded-lg shadow-md m-6 bg-[#FFFFFF]">
           <div className="flex flex-col md:flex-row gap-12">
             {/* Image Upload Section */}
             <div className="flex flex-col items-center justify-end bg-gray-100 rounded-lg w-full md:w-1/3 h-[28rem]">
