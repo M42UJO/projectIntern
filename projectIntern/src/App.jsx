@@ -2,6 +2,7 @@ import React from 'react'
 import Login from './components/login.jsx'
 import Dashboard from './components/dashboard.jsx';
 import Spaces from './components/spaces.jsx';
+import EditSetting from './components/setting.jsx';
 function App() {
   return (
     <>
@@ -11,6 +12,10 @@ function App() {
     <Dashboard />
 
     <Spaces />
+
+    <EditSetting />
+
+    
     </>
   )
 }
