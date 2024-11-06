@@ -8,15 +8,15 @@ function App() {
   return (
     <>
     
-    <Login />
+    {/* <Login />
 
-    <Dashboard />
+    <Dashboard /> */}
 
     <Spaces />
 
-    <EditSetting />
+    {/* <EditSetting />
 
-    <AddSetting />
+    <AddSetting /> */}
 
     
 

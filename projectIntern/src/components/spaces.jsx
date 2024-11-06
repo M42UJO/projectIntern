@@ -1,78 +1,113 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "./sidebar";
-
+import Select from "react-select";
 
 export default function Spaces() {
-  return (
-    <div className="flex h-screen p-4" >
+  const options = [
+    { value: "API", label: "API" },
+    { value: "WEBSITE", label: "WEBSITE" },
+    { value: "MOBILE", label: "MOBILE" },
+  ];
 
+  const [preview, setPreview] = useState(null);
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setPreview(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  return (
+    <div className="flex h-screen p-4">
       <Sidebar />
- 
 
       <main
-        className="flex-grow p-6 rounded-md shadow-lg"
+        className="flex-grow  rounded-md shadow-lg"
         style={{ backgroundColor: "#F5F6FB" }}
       >
-        <header className="flex items-center justify-between mb-10 ">
-          <button className="text-lg font-semibold text-gray-700">
+        <header
+          className="rounded-md shadow-lg bg-white w-full p-6 pt-8 border-b border-gray-300"
+          style={{ marginBottom: "24px" }}
+        >
+          <a href="#" className="text-lg font-bold text-gray-700">
             ← Spaces
-          </button>
+          </a>
         </header>
 
         <section
-          className="p-6 rounded-lg shadow-md"
+          className="p-6 rounded-lg shadow-md m-6"
           style={{ backgroundColor: "#FFFFFF" }}
         >
-          <div className="flex flex-col md:flex-row gap-6">
+          <div className="flex flex-col md:flex-row gap-12">
             {/* Image Upload Section */}
-            <div className="flex flex-col items-center justify-center bg-gray-100 rounded-lg w-full md:w-1/2 h-64">
-              <div className="w-24 h-24 mb-4 bg-gray-300 rounded-lg flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-12 h-12 text-gray-500"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 15a4 4 0 1 1 8 0M7 15v4m4-4a4 4 0 1 0 8 0m-4 0v4m1 4h6a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h6"
-                  />
-                </svg>
-              </div>
-              <button className="bg-slate-950 text-white py-2 px-4 rounded-md w-40">
+            <div className="flex flex-col items-center justify-end bg-gray-100 rounded-lg w-full md:w-1/3 h-[28rem]">
+              {preview ? (
+                <img
+                  src={preview}
+                  alt="Preview"
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center text-gray-500">
+                  No Image
+                </div>
+              )}
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageChange}
+                className="hidden"
+                id="imageUpload"
+              />
+              <label
+                htmlFor="imageUpload"
+                className="bg-slate-950 text-white rounded-b-md w-full py-6 text-center cursor-pointer"
+              >
                 อัพโหลดรูปภาพ
-              </button>
+              </label>
             </div>
 
             {/* Input Fields Section */}
-            <div className="flex flex-col w-full md:w-1/2 space-y-4">
+            <div className="flex flex-col w-full md:w-2/3 space-y-4">
               <div>
-                <label className="text-gray-700 font-medium">
+                <label className="text-gray-700 font-medium text-lg">
                   Spaces Name :
                 </label>
                 <input
                   type="text"
                   placeholder="กรุณาใส่ชื่อ Spaces name"
-                  className="mt-2 p-2 border border-gray-300 rounded-md w-full"
+                  className="mt-2 p-6 border border-gray-300 rounded-md w-full py-4"
                 />
               </div>
               <div>
-                <label className="text-gray-700 font-medium">Tags :</label>
-                <input
-                  type="text"
+                <label className="text-gray-700 font-medium text-lg">
+                  Tags:
+                </label>
+                <Select
+                  options={options}
                   placeholder="กรุณาเลือก Tags"
-                  className="mt-2 p-2 border border-gray-300 rounded-md w-full"
+                  classNamePrefix="custom-select"
+                  className="mt-2 w-full"
+                  styles={{
+                    control: (base) => ({
+                      ...base,
+                      padding: "12px", // ใช้ค่าเดียวกับ py-4
+                      borderRadius: "0.375rem", // ใช้ค่าเดียวกับ rounded-md
+                      borderColor: "rgba(209, 213, 219)", // ใช้สีเดียวกับ border-gray-300
+                    }),
+                  }}
                 />
               </div>
             </div>
           </div>
 
           {/* Save Button */}
-          <div className="mt-8 flex justify-center">
-            <button className="bg-slate-950 text-white py-2 px-8 rounded-md w-40">
+          <div className="mt-12 mb-2 flex justify-center">
+            <button className="bg-slate-950 text-white py-4 px-8 rounded-md w-full">
               บันทึก
             </button>
           </div>
