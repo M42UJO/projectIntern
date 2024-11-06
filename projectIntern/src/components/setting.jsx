@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "./sidebar";
 
-export default function Spaces() {
+export default function EditSetting() {
   const [activeTab, setActiveTab] = useState("รายการ"); // State to track active tab
 
   return (
