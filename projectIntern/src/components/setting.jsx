@@ -8,72 +8,120 @@ export default function Spaces() {
     <div className="flex h-screen p-4">
       <Sidebar />
 
-      <main className="flex-grow p-6 rounded-md shadow-lg" style={{ backgroundColor: "#F5F6FB" }}>
-        {/* Header */}
-        <header className="border-b border-gray-300 pb-4 mb-6">
-          <h1 className="text-2xl font-semibold">PPE API setting</h1>
-          
-          {/* Tab Buttons */}
-          <div className="flex items-center space-x-4 mt-4">
-            <button
-              className={`px-6 py-2 font-semibold ${
-                activeTab === "รายการ"
-                  ? "text-black border-b-2 border-black"
-                  : "text-gray-500"
-              }`}
-              onClick={() => setActiveTab("รายการ")}
-            >
-              รายการ
-            </button>
-            <button
-              className={`px-6 py-2 font-semibold ${
-                activeTab === "ตั้งค่าเอกสาร"
-                  ? "text-black border-b-2 border-black"
-                  : "text-gray-500"
-              }`}
-              onClick={() => setActiveTab("ตั้งค่าเอกสาร")}
-            >
-              ตั้งค่าเอกสาร
-            </button>
-          </div>
-        </header>
+      <main
+        className="flex-grow p-0 rounded-md shadow-lg"
+        style={{ backgroundColor: "#F5F6FB" }}
+      >
+        <div className="p-0 ">
+          {/* Header */}
+          <header
+            className="rounded-md shadow-lg bg-white w-full px-6 pt-6 pb-0 border-b border-gray-300"
+            style={{ marginBottom: "24px" }}
+          >
+            <h1 className="text-2xl font-semibold">PPE API setting</h1>
 
-        {/* Content Section */}
-        <section className="rounded-lg shadow-md p-6" style={{ backgroundColor: "#FFFFFF" }}>
-          {/* Add Item Button */}
-          <div className="mb-4">
-            <button className="bg-black text-white py-2 px-4 rounded-md shadow-md">
-              + เพิ่มรายการ
-            </button>
-          </div>
+            {/* Tab Buttons */}
+            <div className="flex items-center space-x-4 mt-4">
+              <button
+                className={`px-6 py-2 font-semibold ${
+                  activeTab === "รายการ"
+                    ? "text-black border-b-2 border-black"
+                    : "text-gray-500"
+                }`}
+                onClick={() => setActiveTab("รายการ")}
+              >
+                รายการ
+              </button>
+              <button
+                className={`px-6 py-2 font-semibold ${
+                  activeTab === "ตั้งค่าเอกสาร"
+                    ? "text-black border-b-2 border-black"
+                    : "text-gray-500"
+                }`}
+                onClick={() => setActiveTab("ตั้งค่าเอกสาร")}
+              >
+                ตั้งค่าเอกสาร
+              </button>
+            </div>
+          </header>
 
-          {/* List of Items */}
-          <div className="space-y-4">
-            {[1, 2].map((item) => (
-              <div key={item} className="flex items-center justify-between bg-white p-4 rounded-lg shadow-md border border-gray-200">
-                {/* API Setting Name */}
-                <div className="flex items-center space-x-4">
-                  <span className="text-gray-700 font-medium">API Setting V1</span>
-                  <button className="bg-black text-white p-2 rounded-md">
-                    👁️
-                  </button>
+          {/* Content Section */}
+          <section className="p-6">
+            {/* Add Item Button */}
+            <div className="mb-4">
+              <button className="bg-black text-white py-2 px-4 rounded-md shadow-md">
+                + เพิ่มรายการ
+              </button>
+            </div>
+
+            {/* List Header */}
+            <div className="grid grid-cols-4 gap-4 text-gray-600 font-semibold text-sm mb-0">
+              <div>ชื่อหัวข้อ :</div>
+              <div>วันที่อัปโหลด :</div>
+              <div>วันที่อัปเดตล่าสุด :</div>
+              <div>การจัดการ :</div>
+            </div>
+
+            {/* List of Items */}
+            <div className="space-y-4">
+              {[1, 2].map((item) => (
+                <div
+                  key={item}
+                  className="grid grid-cols-4 gap-4 items-center p-2 "
+                >
+                  {/* API Setting Name with Eye Icon */}
+                  <div className="relative flex justify-between items-center bg-white p-2 rounded-md w-full border">
+                    <span className="text-gray-700 font-medium">
+                      API Setting V1
+                    </span>
+                    <button className="bg-black text-white p-2 flex items-center justify-center w-8 h-full absolute right-0 top-0">
+                      <svg
+                        className="w-6 h-6 text-gray-800 dark:text-white"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"
+                        />
+                        <path
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+
+                  {/* Upload Date */}
+                  <div className="bg-white border p-2 rounded-md text-gray-600 text-sm text-center">
+                    01/01/2024
+                  </div>
+
+                  {/* Last Update Date */}
+                  <div className="bg-white border p-2 rounded-md text-gray-600 text-sm text-center">
+                    16/01/2024
+                  </div>
+
+                  {/* Edit and Delete Buttons */}
+                  <div className="flex space-x-2 justify-center">
+                    <button className="bg-gray-400 text-white py-2 px-4 rounded-md">
+                      แก้ไข
+                    </button>
+                    <button className="bg-black text-white py-2 px-4 rounded-md">
+                      ลบ
+                    </button>
+                  </div>
                 </div>
-
-                {/* Date Fields */}
-                <div className="flex items-center space-x-4">
-                  <div className="bg-gray-100 p-2 rounded-md text-gray-600 text-sm">01/01/2024</div>
-                  <div className="bg-gray-100 p-2 rounded-md text-gray-600 text-sm">16/01/2024</div>
-                </div>
-
-                {/* Edit and Delete Buttons */}
-                <div className="flex space-x-2">
-                  <button className="bg-gray-400 text-white py-2 px-4 rounded-md">แก้ไข</button>
-                  <button className="bg-black text-white py-2 px-4 rounded-md">ลบ</button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+              ))}
+            </div>
+          </section>
+        </div>
       </main>
     </div>
   );
