@@ -46,7 +46,7 @@ export default function Login() {
                   required
                   autoComplete="username"
                   placeholder="กรุณาใส่ Username"
-                  className="border-b-2 focus:outline-none mt-2 block w-full px-1 pb-1 border-gray-600 py-2 px-4 text-gray-900 focus:border-gray-900 text-xs"
+                  className="border-b-2 focus:outline-none mt-2 block w-full px-1 pb-1 border-gray-600 py-2  text-gray-900 focus:border-gray-900 text-xs"
                 />
               </div>
 
@@ -65,7 +65,7 @@ export default function Login() {
                   required
                   autoComplete="current-password"
                   placeholder="กรุณาใส่ Password"
-                  className="border-b-2 focus:outline-none mt-2 block w-full px-1 pb-1 border-gray-600  py-2 px-4 text-gray-900 focus:border-gray-900 text-xs"
+                  className="border-b-2 focus:outline-none mt-2 block w-full px-1 pb-1 border-gray-600  py-2 text-gray-900 focus:border-gray-900 text-xs"
                 />
               </div>
 
