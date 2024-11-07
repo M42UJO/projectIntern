@@ -50,7 +50,7 @@ function Nav() {
     </div>
     {isSpacesOpen && (
       <div className=" text-gray-400 font-bold">
-        <Link to="/" className="block py-2 pl-20 button">
+        <Link to="/EditSetting" className="block py-2 pl-20 button">
           PPE API setting
         </Link>
         <Link to="/" className="block py-2 pl-20 button">
@@ -60,7 +60,7 @@ function Nav() {
     )}
 
     <Link
-      to="EditSetting"
+      to="/"
       className="block text-gray-300 button flex items-center font-bold p-4 pl-7"
     >
       <svg

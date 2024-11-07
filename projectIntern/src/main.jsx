@@ -5,7 +5,7 @@ import Login from "./components/login.jsx";
 import Dashboard from "./components/dashboard.jsx";
 import AddSpaces from "./components/Spaces_add.jsx";
 import AddSeting from "./components/setting_add.jsx";
-import EditSetting from "./components/setting.jsx";
+import EditSetting from "./components/setting/setting.jsx";
 
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
