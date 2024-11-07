@@ -4,11 +4,10 @@ import "./index.css";
 import Login from "./components/login.jsx";
 import Dashboard from "./components/dashboard.jsx";
 import AddSpaces from "./components/Spaces_add.jsx";
-import AddSeting from "./components/setting_add.jsx";
+import AddSeting from "./components/setting/setting_add.jsx";
 import EditSetting from "./components/setting/setting.jsx";
-
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import SeeSeting from "./components/setting/setting_see.jsx";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/Login",
     element: <Login />,
+  },
+  {
+    path: "/SeeSetting",
+    element: <SeeSeting />,
   },
 ]);
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Sidebar from "./sidebar/sidebar";
+import Sidebar from "../sidebar/sidebar";
 import { Editor } from "@tinymce/tinymce-react";
+import { Link } from "react-router-dom";
 
 
 export default function AddSeting() {
@@ -86,9 +87,9 @@ export default function AddSeting() {
 
             {/* Save and Cancel Buttons */}
             <div className="flex justify-end space-x-4">
-              <button className="bg-[#AFAFAF] text-white py-4 px-6 w-2/4 rounded-md ">
+              <Link to={"/EditSetting"} className="bg-[#AFAFAF] text-white py-4 px-6 w-2/4 rounded-md ">
                 ยกเลิก
-              </button>
+              </Link>
               <button className="bg-black text-white py-4 px-6 w-2/4 rounded-md ">
                 บันทึก
               </button>

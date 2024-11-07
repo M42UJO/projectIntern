@@ -27,7 +27,7 @@ export default function Listsetting() {
             {/* API Setting Name with Eye Icon */}
             <div className="relative flex justify-between items-center bg-white p-2 py-4 rounded-md w-full border shadow-md">
               <span className="text-gray-700 font-medium">API Setting V1</span>
-              <button className="bg-black shadow-md text-white p-2 flex items-center rounded-r-md justify-center w-14 h-full absolute right-0 top-0">
+              <Link to={"/SeeSetting"} className="bg-black shadow-md text-white p-2 flex items-center rounded-r-md justify-center w-14 h-full absolute right-0 top-0">
                 <svg
                   className="w-6 h-6 text-gray-800 dark:text-white"
                   aria-hidden="true"
@@ -48,7 +48,7 @@ export default function Listsetting() {
                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
                   />
                 </svg>
-              </button>
+              </Link>
             </div>
 
             {/* Upload Date */}
