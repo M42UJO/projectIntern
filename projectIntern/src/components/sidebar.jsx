@@ -1,14 +1,12 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   const [isSpacesOpen, setIsSpacesOpen] = useState(false);
 
   return (
     <>
-      <aside
-        className="w-72 text-white flex flex-col rounded-md shadow-lg mr-4"
-        style={{ backgroundColor: "#11111D" }}
-      >
+      <aside className="w-72 text-white flex flex-col rounded-md shadow-lg mr-4 bg-[#11111D]">
         <div className="flex items-center space-x-2 px-7 py-5 ">
           <div className="bg-slate-50 rounded h-8 w-8 flex items-center justify-center">
             <span className="text-black font-bold">B</span>
@@ -20,8 +18,8 @@ export default function Sidebar() {
         </div>
 
         <nav className="flex-grow  mt-4">
-          <a
-            href="#"
+          <Link
+            to="/"
             className="block text-gray-300 button flex items-center font-bold p-4 pl-7"
           >
             <svg
@@ -39,7 +37,7 @@ export default function Sidebar() {
               />
             </svg>
             Dashboard
-          </a>
+          </Link>
 
           {/* Spaces with Dropdown */}
           <div
@@ -65,17 +63,17 @@ export default function Sidebar() {
           </div>
           {isSpacesOpen && (
             <div className=" text-gray-400 font-bold">
-              <a href="#" className="block py-2 pl-20 button">
+              <Link to="/" className="block py-2 pl-20 button">
                 PPE API setting
-              </a>
-              <a href="#" className="block py-2 pl-20 button">
+              </Link>
+              <Link to="/" className="block py-2 pl-20 button">
                 PWA API setting
-              </a>
+              </Link>
             </div>
           )}
 
-          <a
-            href="#"
+          <Link
+            to="EditSetting"
             className="block text-gray-300 button flex items-center font-bold p-4 pl-7"
           >
             <svg
@@ -98,7 +96,7 @@ export default function Sidebar() {
               />
             </svg>
             Setting
-          </a>
+          </Link>
         </nav>
         <div
           className="py-6 pl-6 flex items-center space-x-2 "

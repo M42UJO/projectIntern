@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Sidebar from "./sidebar";
 import { Editor } from "@tinymce/tinymce-react";
 
-export default function AddSetting() {
+export default function AddSpaces() {
   const [activeTab, setActiveTab] = useState("เพิ่มรายการ");
   const [content, setContent] = useState("");
 

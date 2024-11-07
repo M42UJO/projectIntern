@@ -1,5 +1,6 @@
 import React from "react";
 import Sidebar from "./sidebar";
+import { Link } from "react-router-dom";
 
 export default function Dashboard() {
   return (
@@ -21,9 +22,9 @@ export default function Dashboard() {
             <button className="bg-gray-200 py-4 rounded-md w-40 shadow-md">
               กรองข้อมูล
             </button>
-            <button className="bg-slate-950 text-white py-4 rounded-md w-40 shadow-md">
+            <Link to="/AddSetting" className="bg-slate-950 text-white text-center py-4 rounded-md w-40 shadow-md">
               Spaces +
-            </button>
+            </Link>
           </div>
         </header>
 
