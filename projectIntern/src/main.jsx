@@ -3,9 +3,10 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import Login from "./components/login.jsx";
 import Dashboard from "./components/dashboard.jsx";
-import Spaces from "./components/spaces.jsx";
-import EditSetting from "./components/setting.jsx";
 import AddSpaces from "./components/Spaces_add.jsx";
+import AddSeting from "./components/setting_add.jsx";
+import EditSetting from "./components/setting.jsx";
+
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -15,12 +16,12 @@ const router = createBrowserRouter([
     element: <Dashboard />,
   },
   {
-    path: "/Spaces",
-    element: <Spaces />,
-  },
-  {
     path: "/EditSetting",
     element: <EditSetting />,
+  },
+  {
+    path: "/AddSetting",
+    element: <AddSeting />,
   },
   {
     path: "/AddSpaces",

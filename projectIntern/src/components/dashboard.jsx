@@ -22,7 +22,7 @@ export default function Dashboard() {
             <button className="bg-gray-200 py-4 rounded-md w-40 shadow-md">
               กรองข้อมูล
             </button>
-            <Link to="/AddSetting" className="bg-slate-950 text-white text-center py-4 rounded-md w-40 shadow-md">
+            <Link to="/AddSpaces" className="bg-slate-950 text-white text-center py-4 rounded-md w-40 shadow-md">
               Spaces +
             </Link>
           </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Sidebar from "./sidebar";
+import { Link } from "react-router-dom";
 
 export default function EditSetting() {
   const [activeTab, setActiveTab] = useState("รายการ"); // State to track active tab
@@ -55,9 +56,9 @@ export default function EditSetting() {
           <section className="p-6 pt-1">
             {/* Add Item Button */}
             <div className="mb-8">
-              <button className="bg-black text-white py-2 px-4 rounded-md shadow-md">
+              <Link to={"/AddSetting"} className="bg-black text-white py-2 px-4 rounded-md shadow-md">
                 + เพิ่มรายการ
-              </button>
+              </Link>
             </div>
 
             {/* List Header */}
