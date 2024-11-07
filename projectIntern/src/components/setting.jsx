@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Sidebar from "./sidebar";
+import Sidebar from "./sidebar/sidebar";
 import { Link } from "react-router-dom";
 
 export default function EditSetting() {

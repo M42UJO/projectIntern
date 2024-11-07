@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Sidebar from "./sidebar";
+import Sidebar from "./sidebar/sidebar";
 import Select from "react-select";
 
 export default function AddSpaces() {
