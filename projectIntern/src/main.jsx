@@ -8,6 +8,7 @@ import AddSeting from "./components/setting/setting_add.jsx";
 import EditSetting from "./components/setting/setting.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SeeSeting from "./components/setting/setting_see.jsx";
+import EditList from "./components/setting/list_edit.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/SeeSetting",
     element: <SeeSeting />,
+  },
+  {
+    path: "/EditList",
+    element: <EditList />,
   },
 ]);
 

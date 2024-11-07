@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "./sidebar/sidebar";
 import Select from "react-select";
+import { Link } from "react-router-dom";
 
 export default function AddSpaces() {
   const options = [
@@ -33,9 +34,9 @@ export default function AddSpaces() {
           className="rounded-md shadow-lg bg-white w-full p-6 pt-8 border-b border-gray-300"
           style={{ marginBottom: "24px" }}
         >
-          <a href="#" className="text-lg font-bold text-gray-700">
+          <Link to={"/"} className="text-lg font-bold text-gray-700">
             ← Spaces
-          </a>
+          </Link>
         </header>
 
         <section className="p-6 rounded-lg shadow-md m-6 bg-[#FFFFFF]">

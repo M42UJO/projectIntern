@@ -63,9 +63,9 @@ export default function Listsetting() {
 
             {/* Edit and Delete Buttons */}
             <div className="flex space-x-2 justify-center">
-              <button className="bg-[#AFAFAF] text-white py-4 px-4 w-40 rounded-md shadow-md">
+              <Link to={"/EditList"} className="bg-[#AFAFAF] text-white text-center py-4 px-4 w-40 rounded-md shadow-md">
                 แก้ไข
-              </button>
+              </Link>
               <button className="bg-black text-white py-4 px-4 w-40 rounded-md shadow-md">
                 ลบ
               </button>

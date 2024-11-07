@@ -3,8 +3,7 @@ import Sidebar from "../sidebar/sidebar";
 import { Editor } from "@tinymce/tinymce-react";
 import { Link } from "react-router-dom";
 
-export default function AddSeting() {
-  const [activeTab, setActiveTab] = useState("เพิ่มรายการ");
+export default function EditList() {
   const [content, setContent] = useState("");
 
   const handleEditorChange = (content) => {
@@ -15,7 +14,10 @@ export default function AddSeting() {
     <div className="flex h-screen p-4">
       <Sidebar />
 
-      <main className="flex-grow p-0 rounded-md shadow-lg bg-[#F5F6FB]">
+      <main
+        className="flex-grow p-0 rounded-md shadow-lg"
+        style={{ backgroundColor: "#F5F6FB" }}
+      >
         <div className="p-0 ">
           {/* Header */}
           <header
@@ -33,15 +35,8 @@ export default function AddSeting() {
 
             {/* Tab Buttons */}
             <div className="flex items-center space-x-4 ml-14">
-              <button
-                className={`px-2 py-2 font-semibold ${
-                  activeTab === "เพิ่มรายการ"
-                    ? "text-black border-b-2 border-black"
-                    : "text-gray-500"
-                }`}
-                onClick={() => setActiveTab("เพิ่มรายการ")}
-              >
-                เพิ่มรายการ
+              <button className="px-2 font-semibold text-black border-b-2 border-black">
+                แก้ไข
               </button>
             </div>
           </header>
