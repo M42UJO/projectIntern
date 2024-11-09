@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Sidebar from "./sidebar/sidebar";
+import Sidebar from "../sidebar/sidebar";
 import Select from "react-select";
 import { Link } from "react-router-dom";
 
